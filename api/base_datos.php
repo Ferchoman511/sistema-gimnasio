@@ -47,7 +47,7 @@ function editar($sentencia, $parametros ){
 
 function conectarBaseDatos() {
 	$host = "localhost";
-	$db   = "sistema_gimnasio";
+	$db   = "sistema-gimnasio";
 	$user = "root";
 	$pass = "";
 	$charset = 'utf8mb4';

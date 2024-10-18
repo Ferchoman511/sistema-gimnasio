@@ -20,7 +20,7 @@ switch($metodo){
         $ajustes = obtenerInformacionAjustes();
         if(!$ajustes){
             $ajustes = [
-                "nombre" => "GimPacoHunterDev",
+                "nombre" => "NombreGym",
                 "telefono" => "777666123",
                 "direccion" => "Nowhere",
                 "logo" => "imagenes/logo.png"
