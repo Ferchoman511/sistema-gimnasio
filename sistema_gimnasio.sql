@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2022 a las 12:34:29
--- Versión del servidor: 10.4.18-MariaDB
--- Versión de PHP: 7.4.16
+-- Tiempo de generación: 18-10-2024 a las 04:02:02
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,6 +34,13 @@ CREATE TABLE `ajustes` (
   `telefono` varchar(15) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `ajustes`
+--
+
+INSERT INTO `ajustes` (`nombre`, `logo`, `direccion`, `telefono`) VALUES
+('Maldon´s Gym', './imagenes/6711bd34aacc4.png', 'Av. Isidro Favela ', '5541248451');
+
 -- --------------------------------------------------------
 
 --
@@ -46,6 +53,16 @@ CREATE TABLE `membresias` (
   `duracion` int(6) NOT NULL,
   `precio` decimal(6,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `membresias`
+--
+
+INSERT INTO `membresias` (`id`, `nombre`, `duracion`, `precio`) VALUES
+(1, 'Mensualidad', 30, '330.00'),
+(2, 'Semanal', 7, '120.00'),
+(3, 'Visita', 1, '30.00'),
+(4, 'Promocion 2x500', 30, '500.00');
 
 -- --------------------------------------------------------
 
@@ -108,7 +125,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `nombre`, `telefono`, `password`) VALUES
-(1, 'admin', 'Paco', '11111111', '$2y$10$jfWfxFXCq9aIrGwXTZ80X.AF1UamDTgSxrwabhu/SVx/cwXGcTSR6');
+(1, 'admin', 'Fernando', '5584840236', '$2y$10$uGaq.4FHkdj25kXU53tks.0bkGw0mePjYOPv1zdNuWnlNdheTZO92');
 
 -- --------------------------------------------------------
 
@@ -166,19 +183,19 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de la tabla `membresias`
 --
 ALTER TABLE `membresias`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `miembros`
 --
 ALTER TABLE `miembros`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `pagos`
 --
 ALTER TABLE `pagos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -190,7 +207,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `visitas`
 --
 ALTER TABLE `visitas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
